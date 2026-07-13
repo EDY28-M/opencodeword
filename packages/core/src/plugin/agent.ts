@@ -207,6 +207,7 @@ export const Plugin = define({
             { action: "plan_enter", resource: "*", effect: "deny" },
             { action: "plan_exit", resource: "*", effect: "deny" },
             { action: "todowrite", resource: "*", effect: "allow" },
+            { action: "edit", resource: "*", effect: "ask" },
             // OUTPUTS/ is the only place the work agent may freely write deliverables.
             { action: "edit", resource: path.join("OUTPUTS", "*"), effect: "allow" },
             { action: "edit", resource: path.join("OUTPUTS", "**", "*"), effect: "allow" },
